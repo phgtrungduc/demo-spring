@@ -26,7 +26,13 @@ public class CustomerController {
 
     @PostMapping("save")
     public ResponseEntity<String> saveCustomer(@RequestBody SaveCustomerRequest request) {
-        customerService.saveCustomerNew(request);
+        customerService.SaveCustomerRequest(request);
+        return ResponseEntity.ok("Save Customer Success");
+    }
+
+    public ResponseEntity<String> saveCustomer2(@RequestBody SaveCustomerRequest request) {
+        customerService.SaveCustomerRequest(request);
+        return ResponseEntity.ok("Save Customer Success");
     }
 }
 
