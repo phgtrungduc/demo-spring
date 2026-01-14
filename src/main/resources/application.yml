@@ -1,7 +1,7 @@
 spring:
   application:
     name: demo-spring
-  
+
   # Oracle Database Configuration
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/XEPDB1
@@ -29,4 +29,5 @@ springdoc:
     enabled: true
     tags-sorter: alpha
     operations-sorter: alpha
-
+server:
+  port: 8000
