@@ -18,7 +18,7 @@ public class CustomerService {
 
     @Transactional
     public boolean SaveCustomerRequest(SaveCustomerRequest request){
-        var customer = new Customer();;
+        var customer = new Customer();
         customer.setCustId(request.getCustId());
         customer.setAddress(request.getAddress());
         customer.setCity(request.getCity());

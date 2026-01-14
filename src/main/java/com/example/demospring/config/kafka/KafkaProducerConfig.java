@@ -32,7 +32,7 @@ public class KafkaProducerConfig {
         // LINGER_MS: Đợi tối đa X ms để gom nhiều message vào 1 batch trước khi gửi
         // Nếu batch đầy (đạt BATCH_SIZE) hoặc hết thời gian chờ → gửi ngay
         configProps.put(ProducerConfig.LINGER_MS_CONFIG, 10000);  // 10s - test batching
-        
+
         // BATCH_SIZE: Kích thước MAXIMUM của 1 batch (không phải minimum!)
         // Khi batch đạt size này → gửi ngay (không đợi LINGER_MS)
         configProps.put(ProducerConfig.BATCH_SIZE_CONFIG, 16 * 1024);   // 16KB (đủ cho ~80-100 messages)
@@ -43,6 +43,9 @@ public class KafkaProducerConfig {
 
         // ====== BUFFER ======
         configProps.put(ProducerConfig.BUFFER_MEMORY_CONFIG, 33_554_432);
+
+
+//        configProps.put(ProducerConfig., 33_554_432);
 
 
 
